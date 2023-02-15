@@ -17,5 +17,17 @@ public class UserServiceImpl implements UserService{
 	public UserVO getUser(UserVO vo) {
 		return userDAO.getUser(vo);
 	}
+	public void insertUser(UserVO vo) {
+		this.userDAO.insertUser(vo);
+		System.out.println(vo.getName()+" 사용자 추가 완료");
+	}
+	public void updateUser(UserVO vo) {
+		this.userDAO.updateUser(vo);
+		System.out.println(vo.getId()+" id 사용자 정보 수정 완료");
+	}
+	public void deleteUser(UserVO vo) {
+		this.userDAO.deleteUser(vo);
+		System.out.println(vo.getName()+" 사용자 삭제 완료");
+	}
 	
 }
